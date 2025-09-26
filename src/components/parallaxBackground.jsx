@@ -1,4 +1,9 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import skyImage from "../assets/assets/sky.jpg";
+import mountain3Image from "../assets/assets/mountain-3.png";
+import planetsImage from "../assets/assets/planets.png";
+import mountain2Image from "../assets/assets/mountain-2.png";
+import mountain1Image from "../assets/assets/mountain-1.png";
 
 const ParallaxBackground = () => {
   const { scrollYProgress } = useScroll();
@@ -15,7 +20,7 @@ const ParallaxBackground = () => {
         <div
           className="absolute inset-0 w-full h-screen -z-50"
           style={{
-            backgroundImage: "url(/assets/sky.jpg)",
+            backgroundImage: `url(${skyImage})`,
             backgroundPosition: "bottom",
             backgroundSize: "cover",
           }}
@@ -24,7 +29,7 @@ const ParallaxBackground = () => {
         <motion.div
           className="absolute inset-0 -z-40"
           style={{
-            backgroundImage: "url(/assets/mountain-3.png)",
+            backgroundImage: `url(${mountain3Image})`,
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain3Y,
@@ -34,7 +39,7 @@ const ParallaxBackground = () => {
         <motion.div
           className="absolute inset-0 -z-30"
           style={{
-            backgroundImage: "url(/assets/planets.png)",
+            backgroundImage: `url(${planetsImage})`,
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             x: planetsX,
@@ -44,7 +49,7 @@ const ParallaxBackground = () => {
         <motion.div
           className="absolute inset-0 -z-20"
           style={{
-            backgroundImage: "url(/assets/mountain-2.png)",
+            backgroundImage: `url(${mountain2Image})`,
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain2Y,
@@ -54,7 +59,7 @@ const ParallaxBackground = () => {
         <motion.div
           className="absolute inset-0 -z-10"
           style={{
-            backgroundImage: "url(/assets/mountain-1.png)",
+            backgroundImage: `url(${mountain1Image})`,
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain1Y,
