@@ -4,6 +4,12 @@ import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/FrameWorks";
 
+// Import des images
+import csharpPink from "../assets/assets/logos/csharp-pink.png";
+import dotnetPink from "../assets/assets/logos/dotnet-pink.png";
+import blazorPink from "../assets/assets/logos/blazor-pink.png";
+import codingPov from "../assets/assets/coding-pov.png";
+
 const About = () => {
   const grid2Container = useRef();
   return (
@@ -13,7 +19,8 @@ const About = () => {
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
           <img
-            src="assets/coding-pov.png"
+            src={codingPov}
+            alt="Coding illustration"
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
@@ -71,7 +78,7 @@ const About = () => {
                 left: "78%",
                 transform: "scale(0.85)"
               }}
-              image="assets/logos/csharp-pink.png"
+              image={csharpPink}
               containerRef={grid2Container}
             />
 
@@ -107,7 +114,7 @@ const About = () => {
                 left: "12%",
                 transform: "scale(0.8)"
               }}
-              image="assets/logos/dotnet-pink.png"
+              image={dotnetPink}
               containerRef={grid2Container}
             />
 
@@ -131,7 +138,7 @@ const About = () => {
                 left: "18%",
                 transform: "scale(0.8)"
               }}
-              image="assets/logos/blazor-pink.png"
+              image={blazorPink}
               containerRef={grid2Container}
             />
           </div>

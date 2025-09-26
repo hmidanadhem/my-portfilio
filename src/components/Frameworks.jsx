@@ -15,6 +15,12 @@ import sqliteIcon from "../assets/assets/logos/sqlite.svg";
 import tailwindcssIcon from "../assets/assets/logos/tailwindcss.svg";
 import vitejsIcon from "../assets/assets/logos/vitejs.svg";
 import wordpressIcon from "../assets/assets/logos/wordpress.svg";
+import angularIcon from "../assets/assets/logos/angular.svg";
+import azureIcon from "../assets/assets/logos/azure.svg";
+import githubIcon from "../assets/assets/logos/github.svg";
+import mssqlIcon from "../assets/assets/logos/microsoftsqlserver.svg";
+import threejsIcon from "../assets/assets/logos/threejs.svg";
+import vscodeIcon from "../assets/assets/logos/visualstudiocode.svg";
 
 const icons = {
   auth0: auth0Icon,
@@ -33,6 +39,12 @@ const icons = {
   tailwindcss: tailwindcssIcon,
   vitejs: vitejsIcon,
   wordpress: wordpressIcon,
+  angular: angularIcon,
+  azure: azureIcon,
+  github: githubIcon,
+  mssql: mssqlIcon,
+  threejs: threejsIcon,
+  vscode: vscodeIcon,
 };
 
 export function Frameworks() {
