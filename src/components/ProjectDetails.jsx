@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import closeIcon from "../assets/assets/close.svg";
+import arrowUpIcon from "../assets/assets/arrow-up.svg";
 const ProjectDetails = ({
   title,
   description,
@@ -19,7 +21,7 @@ const ProjectDetails = ({
           onClick={closeModal}
           className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
         >
-          <img src="assets/close.svg" className="w-6 h-6" />
+          <img src={closeIcon} className="w-6 h-6" />
         </button>
         <img src={image} alt={title} className="w-full rounded-t-2xl" />
         <div className="p-5">
@@ -41,7 +43,7 @@ const ProjectDetails = ({
             </div>
             <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
               View Project{" "}
-              <img src="assets/arrow-up.svg" className="size-4" href={href} />
+              <img src={arrowUpIcon} className="size-4" href={href} />
             </a>
           </div>
         </div>
