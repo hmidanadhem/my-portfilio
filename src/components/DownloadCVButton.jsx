@@ -24,7 +24,7 @@ const DownloadCVButton = () => {
       transition={{ delay: 2.2, duration: 0.6 }}
     >
       <Download size={20} />
-      <span className="font-medium">Télécharger mon CV</span>
+      <span className="font-medium">Download my CV</span>
     </motion.button>
   );
 };
