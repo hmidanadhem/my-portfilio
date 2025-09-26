@@ -1,11 +1,12 @@
 import { motion } from "motion/react";
 import { Download } from "lucide-react";
+import cvFile from "../assets/assets/cv/Nadhem_Hmida_CV.pdf";
 
 const DownloadCVButton = () => {
   const handleDownload = () => {
     // Créer un lien de téléchargement
     const link = document.createElement('a');
-    link.href = '/assets/cv/Nadhem_Hmida_CV.pdf'; // Chemin vers votre CV
+    link.href = cvFile; // Chemin vers votre CV
     link.download = 'Nadhem_Hmida_CV.pdf'; // Nom du fichier téléchargé
     document.body.appendChild(link);
     link.click();
