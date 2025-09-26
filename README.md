@@ -56,6 +56,7 @@ A modern, animated 3D developer portfolio built with React, Three.js, TailwindCS
 ├── src/
 │   ├── components/         # Reusable components
 │   ├── constants/          # Reusable datas
+           ├── constants/index.js  
 │   ├── sections/           # Portfolio sections (Hero, About, etc.)
 │   ├── App.jsx             # Main app file
 │   ├── index.css           # Tailwind css
