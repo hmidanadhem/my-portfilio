@@ -51,21 +51,38 @@ export function Frameworks() {
   const skills = Object.keys(icons);
 
   return (
-    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
-      <OrbitingCircles iconSize={40}>
+    <div className="relative flex h-[15rem] w-full flex-col items-center justify-center overflow-hidden">
+      <OrbitingCircles iconSize={40} className="hidden sm:block">
         {skills.map((skill, index) => (
-          <Icon key={index} src={icons[skill]} />
+          <Icon key={index} src={icons[skill]} className="w-10 h-10 sm:w-12 sm:h-12" />
         ))}
       </OrbitingCircles>
-      <OrbitingCircles iconSize={25} radius={100} reverse speed={2}>
+      <OrbitingCircles iconSize={25} radius={100} reverse speed={2} className="hidden sm:block">
         {[...skills].reverse().map((skill, index) => (
-          <Icon key={index} src={icons[skill]} />
+          <Icon key={index} src={icons[skill]} className="w-6 h-6 sm:w-8 sm:h-8" />
         ))}
       </OrbitingCircles>
+      
+      {/* Version mobile - Affichage en grille statique */}
+      <div className="sm:hidden grid grid-cols-4 gap-4 p-4 w-full h-full overflow-y-auto">
+        {skills.map((skill, index) => (
+          <div key={index} className="flex items-center justify-center p-2">
+            <img 
+              src={icons[skill]} 
+              alt={skill} 
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
-const Icon = ({ src }) => (
-  <img src={src} className="duration-200 rounded-sm hover:scale-110" />
+const Icon = ({ src, className = '' }) => (
+  <img 
+    src={src} 
+    className={`duration-200 rounded-sm hover:scale-110 ${className}`} 
+    alt=""
+  />
 );
